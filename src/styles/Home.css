@@ -1,0 +1,49 @@
+.oompaLoompas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.oompaLoompa__image {
+  display: flex;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  width: 350px;
+}
+
+.oompaLoompa__description {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100px;
+  width: 325px;
+}
+
+.oompaLoompa__description--name {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 120px;
+}
+
+.oompaLoompa__description--name:hover {
+    cursor: pointer;
+    color: #2DB2CD;
+}
+
+.oompaLoompa__description--gender,
+.oompaLoompa__description--profession {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 5px;
+
+}
+
+.oompaLoompa__description--profession {
+font-style: oblique;
+}

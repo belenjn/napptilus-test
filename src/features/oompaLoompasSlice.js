@@ -3,8 +3,8 @@ import { fetchData } from "../fetchData";
 
 export const fetchGetOompaLoompas = createAsyncThunk(
   "fetchData",
-  async () => {
-    return await fetchData();
+  async (page) => {
+    return await fetchData(page);
   }
 );
 const initialState = {
