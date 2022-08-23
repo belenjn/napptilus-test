@@ -19,6 +19,10 @@
     justify-content: center;
   }
 
+  .navbar h4 {
+    font-weight: 700;
+  }
+
   .navbar img {
     margin-right: 20px;
     margin-left: -10px;
