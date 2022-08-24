@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchData } from "../fetchData";
 
-export const fetchGetOompaLoompas = createAsyncThunk(
+export const getOompaLoompas = createAsyncThunk(
   "Get all Oompa Loompas",
   async (page) => {
     return await fetchData(page);
@@ -19,14 +19,14 @@ export const oompaLoompasSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchGetOompaLoompas.pending, (state) => {
+      .addCase(getOompaLoompas.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchGetOompaLoompas.fulfilled, (state, action) => {
+      .addCase(getOompaLoompas.fulfilled, (state, action) => {
         state.status = "success";
         state.oompaLoompas = action.payload;
       })
-      .addCase(fetchGetOompaLoompas.rejected, (state) => {
+      .addCase(getOompaLoompas.rejected, (state) => {
         state.status = "failed";
       });
   },

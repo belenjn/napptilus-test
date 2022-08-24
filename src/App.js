@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Details } from "./components/Details";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
-import { fetchGetOompaLoompas } from "./features/oompaLoompasSlice";
+import { getOompaLoompas } from "./features/oompaLoompasSlice";
 
 function App() {
   const { oompaLoompas } = useSelector((state) => state.oompaLoompas);
@@ -13,7 +13,7 @@ function App() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    dispatch(fetchGetOompaLoompas(page));
+    dispatch(getOompaLoompas(page));
   }, [dispatch, page]);
 
   return (

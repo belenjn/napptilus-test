@@ -9,7 +9,10 @@ export const Home = ({ oompaLoompas, setPage }) => {
   };
 
   return (
-    <div>
+    <div className="home__container">
+        <h1>Find your Oompa Loompa</h1>
+        <h3>There are more than 100k</h3>
+
       <div className="oompaLoompas">
         {oompaLoompas.map((oompaLoompa) => {
           return (

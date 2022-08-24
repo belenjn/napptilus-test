@@ -6,7 +6,7 @@ import "../styles/Details.css";
 export const Details = () => {
   const { id } = useParams();
   const [oompa, setOompa] = useState({});
-
+  
 
   useEffect(
     () => async () => {
