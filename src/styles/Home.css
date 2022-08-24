@@ -5,6 +5,11 @@
   padding: 30px;
 }
 
+a { 
+  text-decoration: none;
+  color: black;
+}
+
 .oompaLoompa__image {
   display: flex;
   margin: auto;
@@ -28,7 +33,7 @@
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 5px;
-    width: 120px;
+    width: 200px;
 }
 
 .oompaLoompa__description--name:hover {

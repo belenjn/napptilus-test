@@ -2,11 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchData } from "../fetchData";
 
 export const fetchGetOompaLoompas = createAsyncThunk(
-  "fetchData",
+  "Get all Oompa Loompas",
   async (page) => {
     return await fetchData(page);
   }
 );
+
 const initialState = {
   oompaLoompas: [],
   status: "",

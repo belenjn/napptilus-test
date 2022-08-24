@@ -1,18 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchGetOompaLoompas } from "../features/oompaLoompasSlice";
+import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
-export const Home = () => {
-  const { oompaLoompas } = useSelector((state) => state.oompaLoompas);
+export const Home = ({oompaLoompas, setPage}) => {
 
-  const dispatch = useDispatch();
-  const [page, setPage] = useState(1);
-
-  useEffect(() => {
-    dispatch(fetchGetOompaLoompas(page));
-  }, [dispatch, page]);
 
   return (
     <InfiniteScroll
@@ -42,9 +34,13 @@ export const Home = () => {
                   ></div>
 
                   <div className="oompaLoompa__description">
-                    <span className="oompaLoompa__description--name">
+                    <Link 
+                    className="oompaLoompa__description--name"
+                    to={`/${oompaLoompa.id}`}
+                    >
+                      
                       {oompaLoompa.first_name}
-                    </span>
+                    </Link>
                     <span className="oompaLoompa__description--gender">
                       {oompaLoompa.gender === "F" ? "Female" : "Man"}
                     </span>
