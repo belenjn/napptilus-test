@@ -1,25 +1,17 @@
+import { Pagination, Stack } from "@mui/material";
 import { React } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 export const Home = ({oompaLoompas, setPage}) => {
 
+  const handleChange = (event, value) => {
+    setPage(value + 1);
+  };
+
+  
 
   return (
-    <InfiniteScroll
-      dataLength={oompaLoompas.length}
-      next={() => {
-        setPage((page) => page + 1);
-      }}
-      hasMore={true}
-      loader={<h4 style={{ textAlign: "center" }}>Loading...</h4>}
-      endMessage={
-        <p style={{ textAlign: "center" }}>
-          <b>You have seen it all</b>
-        </p>
-      }
-    >
       <div>
         <div className="oompaLoompas">
           {oompaLoompas.map((oompaLoompa) => {
@@ -53,7 +45,9 @@ export const Home = ({oompaLoompas, setPage}) => {
             );
           })}
         </div>
+        <Stack spacing={2}>
+        <Pagination count={10} onChange={handleChange} variant="outlined" color="primary" style={{alignSelf: "center", marginBottom: "50px"}}/>
+    </Stack>
       </div>
-    </InfiniteScroll>
   );
 };
