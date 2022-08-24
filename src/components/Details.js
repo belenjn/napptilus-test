@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { endpoint } from "../env";
-import "../styles/Details.css"
+import "../styles/Details.css";
 
 export const Details = () => {
   const { id } = useParams();
   const [oompa, setOompa] = useState({});
 
-  const dispatch = useDispatch();
 
   useEffect(
     () => async () => {
@@ -18,22 +16,21 @@ export const Details = () => {
       setOompa(oompaLoompa);
       return oompaLoompa;
     },
-    [id, dispatch]
+    [id]
   );
 
   return (
     <div className="details__container">
-      <div 
-      className="details__container--image" 
-      style={{
-        backgroundImage: `url(${oompa.image})`
-      }}
-      
+      <div
+        className="details__container--image"
+        style={{
+          backgroundImage: `url(${oompa.image})`,
+        }}
       />
 
       <div className="details__container--text">
         <span className="oompaLoompa__description--name">
-          {oompa.first_name + ' ' + oompa.last_name}
+          {oompa.first_name + " " + oompa.last_name}
         </span>
 
         <span className="oompaLoompa__description--gender">
