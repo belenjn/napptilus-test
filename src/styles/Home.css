@@ -6,8 +6,8 @@
 }
 
 .home__container h1 {
-font-size: 60px;
-margin-bottom: -30px;
+  font-size: 60px;
+  margin-bottom: -30px;
 }
 
 .home__container h3 {
@@ -17,12 +17,43 @@ margin-bottom: -30px;
 
 .home__container h1,
 .home__container h3 {
-text-align: center;
-font-weight: 300;
-
+  text-align: center;
+  font-weight: 300;
 }
 
-a { 
+.input__container {
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+
+.input__container input {
+  border: 1px solid rgba(0, 0, 0, 0.398);
+  align-self: center;
+  border-radius: 5px;
+  padding: 2px;
+  padding-left: 10px;
+  width: 120px;
+  height: 20px;
+}
+
+.input__image {
+  height: 20px;
+  width: 20px;
+  margin-right: 100px;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.input__image:hover {
+  cursor: pointer;
+}
+
+.input__container input::placeholder {
+  color: black;
+}
+
+a {
   text-decoration: none;
   color: black;
 }
@@ -47,25 +78,24 @@ a {
 }
 
 .oompaLoompa__description--name {
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    width: 200px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  width: 200px;
 }
 
 .oompaLoompa__description--name:hover {
-    cursor: pointer;
-    color: #2DB2CD;
+  cursor: pointer;
+  color: #2db2cd;
 }
 
 .oompaLoompa__description--gender,
 .oompaLoompa__description--profession {
-    font-size: 14px;
-    color: #999999;
-    margin-bottom: 5px;
-
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 5px;
 }
 
 .oompaLoompa__description--profession {
-font-style: oblique;
+  font-style: oblique;
 }

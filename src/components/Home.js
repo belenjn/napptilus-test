@@ -1,6 +1,7 @@
 import { Pagination, Stack } from "@mui/material";
 import { React } from "react";
 import { Link } from "react-router-dom";
+import lupa from "../assets/ic_search.png"
 import "../styles/Home.css";
 
 export const Home = ({ oompaLoompas, setPage }) => {
@@ -10,8 +11,13 @@ export const Home = ({ oompaLoompas, setPage }) => {
 
   return (
     <div className="home__container">
-        <h1>Find your Oompa Loompa</h1>
-        <h3>There are more than 100k</h3>
+      <div className="input__container">
+        <input type="text" placeholder="Search"/>
+        <img src={lupa} alt="lupa" className="input__image"/>
+      </div>
+
+      <h1>Find your Oompa Loompa</h1>
+      <h3>There are more than 100k</h3>
 
       <div className="oompaLoompas">
         {oompaLoompas.map((oompaLoompa) => {
