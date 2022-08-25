@@ -9,6 +9,7 @@ export const Home = ({ oompaLoompas, setPage }) => {
     setPage(value + 1);
   };
 
+
   return (
     <div className="home__container">
       <div className="input__container">

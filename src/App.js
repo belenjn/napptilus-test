@@ -10,6 +10,7 @@ function App() {
   const { oompaLoompas } = useSelector((state) => state.oompaLoompas);
 
   const dispatch = useDispatch();
+
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -24,10 +25,8 @@ function App() {
           path="/"
           element={<Home oompaLoompas={oompaLoompas} setPage={setPage} />}
         />
-        
-        <Route 
-        path="/:id" 
-        element={<Details />} />
+
+        <Route path="/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );
