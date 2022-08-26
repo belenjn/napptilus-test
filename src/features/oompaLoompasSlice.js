@@ -16,7 +16,6 @@ const initialState = {
 export const oompaLoompasSlice = createSlice({
   name: "oompa loompa",
   initialState,
-  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getOompaLoompas.pending, (state) => {
@@ -31,7 +30,5 @@ export const oompaLoompasSlice = createSlice({
       });
   },
 });
-
-// export const {} = imagesSlice.actions;
 
 export default oompaLoompasSlice.reducer;

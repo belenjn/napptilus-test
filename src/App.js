@@ -26,7 +26,7 @@ function App() {
           element={<Home oompaLoompas={oompaLoompas} setPage={setPage} />}
         />
 
-        <Route path="/:id" element={<Details />} />
+        <Route path="/:id"  element={<Details/>} />
       </Routes>
     </BrowserRouter>
   );

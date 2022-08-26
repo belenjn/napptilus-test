@@ -1,27 +1,58 @@
 import { Pagination, Stack } from "@mui/material";
-import { React } from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import lupa from "../assets/ic_search.png"
+import lupa from "../assets/ic_search.png";
 import "../styles/Home.css";
 
 export const Home = ({ oompaLoompas, setPage }) => {
+  const [search, setSearch] = useState("");
+
   const handleChange = (event, value) => {
     setPage(value + 1);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearch("");
+  };
 
+  const handleChangeFilter = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const filterOompas = () => {
+    if (search.length) {
+      const profession = oompaLoompas.filter((oompa) => {
+        return JSON.stringify(oompa.profession)
+          .toLocaleLowerCase()
+          .includes(search.toLocaleLowerCase());
+      });
+
+      const name = oompaLoompas.filter((oompa) => {
+        return JSON.stringify(oompa.first_name + " " + oompa.last_name)
+          .toLocaleLowerCase()
+          .includes(search.toLocaleLowerCase());
+      });
+      return (profession, name);
+    } else {
+      return oompaLoompas;
+    }
+  };
+
+  const oompas = filterOompas();
   return (
     <div className="home__container">
-      <div className="input__container">
-        <input type="text" placeholder="Search"/>
-        <img src={lupa} alt="lupa" className="input__image"/>
-      </div>
+      <form className="input__container" onSubmit={handleSubmit}>
+        <input type="text" placeholder="Search" onChange={handleChangeFilter} />
+        <img src={lupa} alt="lupa" className="input__image" />
+      </form>
 
       <h1>Find your Oompa Loompa</h1>
       <h3>There are more than 100k</h3>
 
       <div className="oompaLoompas">
-        {oompaLoompas.map((oompaLoompa) => {
+        {oompas.map((oompaLoompa) => {
           return (
             <div key={oompaLoompa.id}>
               <div className="oompaLoompa">

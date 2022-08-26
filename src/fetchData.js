@@ -8,11 +8,12 @@ export const fetchData = async (page) => {
   const lastFetch = localStorage.getItem(fetchedKey)
     ? new Date(localStorage.getItem(fetchedKey))
     : null;
+
   const today = new Date();
   if (lastFetch && today - lastFetch <= day) {
     return JSON.parse(localStorage.getItem(dataKey));
   }
-
+  
   const response = await fetch(endpoint + `?page=${page}`);
   const json = await response.json();
   localStorage.setItem(fetchedKey, today.toISOString());

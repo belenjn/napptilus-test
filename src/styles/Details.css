@@ -28,6 +28,10 @@
     width: 50%;
 }
 
+.oompaLoompa__description--description {
+    overflow-wrap: break-word;
+}
+
 @media only screen and (max-width: 400px) {
     .details__container {
         display: flex;
