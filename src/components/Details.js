@@ -1,61 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { endpoint } from "../env";
+import { getOompaLoompa } from "../features/oompaLoompasSlice";
 import "../styles/Details.css";
 
+
 export const Details = () => {
+  const { oompaLoompa } = useSelector((state) => state.oompaLoompas);
+
   const { id } = useParams();
-  const [oompa, setOompa] = useState({});
 
-  const day = 1000 * 60 * 60 * 24;
+  const dispatch = useDispatch();
 
-  useEffect(
-    () => async () => {
-      const fetchedKey = `last_fetch_id_${id}`;
-      const dataKey = `data_id_${id}`;
-      const lastFetch = localStorage.getItem(fetchedKey)
-        ? new Date(localStorage.getItem(fetchedKey))
-        : null;
-
-      const today = new Date();
-      if (lastFetch && today - lastFetch <= day) {
-        return JSON.parse(localStorage.getItem(dataKey));
-      }
-
-      const response = await fetch(endpoint + `/${id}`);
-      const json = await response.json();
-      localStorage.setItem(fetchedKey, today.toISOString());
-      localStorage.setItem(dataKey, JSON.stringify(json));
-      setOompa(json);
-      return json;
-    },
-    [day, id]
-  );
+  useEffect(() => {
+    dispatch(getOompaLoompa(id));
+  }, [dispatch, id]);
 
   return (
     <div className="details__container">
       <div
         className="details__container--image"
         style={{
-          backgroundImage: `url(${oompa.image})`,
+          backgroundImage: `url(${oompaLoompa.image})`,
         }}
       />
 
       <div className="details__container--text">
         <span className="oompaLoompa__description--name">
-          {oompa.first_name + " " + oompa.last_name}
+          {oompaLoompa.first_name + " " + oompaLoompa.last_name}
         </span>
 
         <span className="oompaLoompa__description--gender">
-          {oompa.gender === "F" ? "Female" : "Man"}
+          {oompaLoompa.gender === "F" ? "Female" : "Man"}
         </span>
         <span className="oompaLoompa__description--profession">
-          {oompa.profession}
+          {oompaLoompa.profession}
         </span>
 
         <span
           className="oompaLoompa__description--description"
-          dangerouslySetInnerHTML={{ __html: oompa.description }}
+          dangerouslySetInnerHTML={{ __html: oompaLoompa.description }}
         />
       </div>
     </div>

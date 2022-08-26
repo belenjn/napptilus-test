@@ -6,6 +6,9 @@ import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { getOompaLoompas } from "./features/oompaLoompasSlice";
 
+export const endpoint = "https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas"
+
+
 function App() {
   const { oompaLoompas } = useSelector((state) => state.oompaLoompas);
 

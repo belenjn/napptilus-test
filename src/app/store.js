@@ -1,8 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import oompaLoompasReducer from '../features/oompaLoompasSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import oompaLoompasReducer from "../features/oompaLoompasSlice";
 
-export default configureStore({
+export default configureStore(
+  {
     reducer: {
-        oompaLoompas: oompaLoompasReducer
+      oompaLoompas: oompaLoompasReducer,
     },
-    middleware: getDefaultMiddleware =>  getDefaultMiddleware({    serializableCheck: false,  }),});
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({ serializableCheck: false }),
+  });
