@@ -1,14 +1,13 @@
-# Oompa Loompa's App
+#  Oompa Loompa's App
 
 A web application to manage the Oompa Loompa's crew of Willy Wonka's chocolate factory.
-The application will serve as a tool to help the company’s Human Resources department.
+The application will serve as a tool to help the company’s Human Resources department. 
+
 
 # Install dependencies
-
 `npm install`
 
 # Run the local server
-
 `npm start`
 
 # Built with
@@ -17,49 +16,46 @@ The application will serve as a tool to help the company’s Human Resources dep
 <li>React-router</li>
 <li>Redux</li>
 
-# App's folders:
-
+# App's folders: 
 {
-"public",
-"src": {
-"app": {
-"store.js"
-},
-"assets",
-"components": {
-"Details.js",
-"Home.js",
-"Navbar.js"
-},
-"features": {
-"oompaLoompasSlice.js"
-},
-"styles": {
-"Details.css",
-"Home.css",
-"Navbar.css"
-},
-
-"utils": {
-"strings.js"
-},
-"App.js",
-"fetchData.js",
-"index.css",
-"index.js"
-},
-"gitignore",
-"package-lock.json",
-"package.json",
-"README"
-}
+    "public",
+    "src": [
+        "app": {
+            "store.js"
+        },
+        "assets",
+        "components": [
+            "Details.js",
+            "Home.js",
+            "Navbar.js"
+        ],
+        "features": {
+            "oompaLoompasSlice.js"
+        },
+        "styles": [
+            "Details.css",
+            "Home.css",
+            "Navbar.css"
+        ],
+        "utils": {
+            "strings.js"
+        },
+        "App.js",
+        "fetchData.js",
+        "index.css",
+        "index.js"
+    },
+    "gitignore",
+    "package-lock.json",
+    "package.json",
+    "README"
+]
 
 # Images:
 
 `Main view`
-
 <p align="center"> <img src="https://user-images.githubusercontent.com/75947904/186890455-5d3dfb3b-2797-4dc6-9beb-70ae7b9751ed.png"/></p>
 
 `Details view`
-
 <p align="center"> <img src="https://user-images.githubusercontent.com/75947904/186890567-1df98ebd-e585-4754-a4bf-b5046bc11309.png"/></p>
+
