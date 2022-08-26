@@ -16,6 +16,9 @@ The application will serve as a tool to help the company’s Human Resources dep
 <li>React-router</li>
 <li>Redux</li>
 
+# App's folders: 
+<p align="center"> <img src="https://user-images.githubusercontent.com/75947904/186934109-4b2852ed-5701-4bd3-ae52-3da6db1a7854.png" /></p>
+
 
 # Images:
 
