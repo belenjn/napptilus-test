@@ -44,12 +44,13 @@ The application will serve as a tool to help the company’s Human Resources dep
         "fetchData.js",
         "index.css",
         "index.js"
-    },
+    
+    ],
     "gitignore",
     "package-lock.json",
     "package.json",
     "README"
-]
+}
 
 # Images:
 
@@ -58,4 +59,3 @@ The application will serve as a tool to help the company’s Human Resources dep
 
 `Details view`
 <p align="center"> <img src="https://user-images.githubusercontent.com/75947904/186890567-1df98ebd-e585-4754-a4bf-b5046bc11309.png"/></p>
-
