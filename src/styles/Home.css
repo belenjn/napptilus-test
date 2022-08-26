@@ -99,3 +99,21 @@ a {
 .oompaLoompa__description--profession {
   font-style: oblique;
 }
+
+@media only screen and (max-width: 400px) {
+  .oompaLoompas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .oompaLoompa__image {
+    display: flex;
+    margin: auto;
+    height: 240px;
+    width: 300px;
+  }
+
+  .oompaLoompa__description {
+    width: 280px;
+  }
+}
