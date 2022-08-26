@@ -19,7 +19,7 @@ The application will serve as a tool to help the company’s Human Resources dep
 # App's folders: 
 {
     "public",
-    "src": [
+    "src": {
         "app": {
             "store.js"
         },
@@ -45,7 +45,7 @@ The application will serve as a tool to help the company’s Human Resources dep
         "index.css",
         "index.js"
     
-    ],
+    },
     "gitignore",
     "package-lock.json",
     "package.json",
