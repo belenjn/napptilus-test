@@ -16,41 +16,6 @@ The application will serve as a tool to help the company’s Human Resources dep
 <li>React-router</li>
 <li>Redux</li>
 
-# App's folders: 
-{
-    "public",
-    "src": {
-        "app": {
-            "store.js"
-        },
-        "assets",
-        "components": [
-            "Details.js",
-            "Home.js",
-            "Navbar.js"
-        ],
-        "features": {
-            "oompaLoompasSlice.js"
-        },
-        "styles": [
-            "Details.css",
-            "Home.css",
-            "Navbar.css"
-        ],
-        "utils": {
-            "strings.js"
-        },
-        "App.js",
-        "fetchData.js",
-        "index.css",
-        "index.js"
-    
-    },
-    "gitignore",
-    "package-lock.json",
-    "package.json",
-    "README"
-}
 
 # Images:
 
