@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import lupa from "../assets/ic_search.png";
 import "../styles/Home.css";
+import { strings } from "../utils/strings";
 
 export const Home = ({ oompaLoompas, setPage }) => {
   const [search, setSearch] = useState("");
@@ -48,8 +49,8 @@ export const Home = ({ oompaLoompas, setPage }) => {
         <img src={lupa} alt="lupa" className="input__image" />
       </form>
 
-      <h1>Find your Oompa Loompa</h1>
-      <h3>There are more than 100k</h3>
+      <h1>{strings.home_title_h1}</h1>
+      <h3>{strings.home_title_h3}</h3>
 
       <div className="oompaLoompas">
         {oompas.map((oompaLoompa) => {
